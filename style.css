@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+}
+.display {
+    display: block;
+}
+.operator {
+    display: flex;
+    flex-direction: column;
+}
