@@ -3,12 +3,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
+
 .buttons {
     display: flex;
 }
 .display {
     display: block;
+    border: 1px solid blue;
+    width: auto;
+    height: 25px;
 }
 .operator {
     display: flex;

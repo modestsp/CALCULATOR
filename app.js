@@ -1,3 +1,6 @@
+const display = document.querySelector('.display')
+const buttons = document.querySelectorAll('button')
+
 // Function add: Number Number -> Number
 function add(a, b) {
     return (a + b);
@@ -41,3 +44,12 @@ function operate(char, a, b) {
     }
     return result;
 }
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(btn.textContent)
+        if (display.textContent.length > 10) return display.textContent;
+        display.textContent += "" + `${btn.textContent}`;
+        
+    })
+})
