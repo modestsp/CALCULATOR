@@ -1,5 +1,6 @@
 const display = document.querySelector('.display')
 const buttons = document.querySelectorAll('button')
+const clearButton = document.querySelector('.clearButton')
 
 // Function add: Number Number -> Number
 function add(a, b) {
@@ -52,4 +53,8 @@ buttons.forEach(btn => {
         display.textContent += "" + `${btn.textContent}`;
         
     })
+})
+
+clearButton.addEventListener('click', () => {
+    display.textContent = ''
 })
