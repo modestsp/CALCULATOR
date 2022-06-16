@@ -2,18 +2,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     border: 1px solid blue;
-    
+    background-color: aliceblue;
     margin-top: 100px;
+    width: 500px;
+    height: 600px;
 }
 
 .buttons {
     display: flex;
+    flex: 1;
 }
 
 .fourthRow {
@@ -23,23 +27,52 @@ body {
     flex: 2 1 auto;
 }
 .display {
-    display: block;
+    display: flex;
     border: 1px solid blue;
-    width: auto;
-    height: 25px;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+    font-size: 70px;
 }
 
-.equal {
+/* .equal {
     display: flex;
-    flex: 2 1 auto;
+    flex: 1 1 auto;
     justify-content: space-evenly;
-}
+} */
 
 .numbers {
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(44, 167, 91);
     flex: 1;
 }
+button {
+    font-size: 20px;
+}
+.firstRow,
+.secondRow,
+.thirdRow,
+.fourthRow {
+    background-color: aqua;
+    display: flex;
+    flex: 5;
+    justify-content: space-evenly;
+}
+.fifthRow {
+    display: flex;
+    justify-content: space-evenly;
 
+}
+.fifthRow button {
+    display: flex;
+    flex: 1;
+
+    justify-content: center;
+}
+.firstRow button {
+    width: auto;
+}
 .operators {
     display: flex;
     flex-direction: column;

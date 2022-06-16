@@ -44,7 +44,6 @@ function operate(char, a, b) {
         default:
             result = 'Unknown operator'
     }
-    console.log(char)
     return result;
 }
 
@@ -55,6 +54,11 @@ const display = document.querySelector('.display')
 
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
+        if((value1 != 0) && (value2 != 0)) {
+            value1 = 0;
+            value2 = 0;
+            display.textContent = '';
+        }
         if (display.textContent.length > 10) return display.textContent;
         display.textContent += "" + `${btn.textContent}`;
         
@@ -84,9 +88,6 @@ operators.forEach(op => {
         let displayContent = display.textContent;
         value1 = parseInt(displayContent.substring(0,displayContent.length - 1));
         operator = displayContent.substring(displayContent.length - 1)
-        console.log(display.textContent);
-        console.log(value1);
-        console.log(operator);
         return (display.textContent = '');
     })
 })
@@ -96,6 +97,5 @@ operators.forEach(op => {
 equal.addEventListener('click', () => {
     let displayContent = display.textContent;
     value2 = parseInt(displayContent.substring(0,displayContent.length - 1));
-    console.log(operator, value1, value2);
     display.textContent = operate(operator, value1, value2);
 })
