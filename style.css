@@ -1,13 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid blue;
+    
     margin-top: 100px;
 }
 
 .buttons {
     display: flex;
+}
+
+.fourthRow {
+    display: flex;
+}
+#zero {
+    flex: 2 1 auto;
 }
 .display {
     display: block;
@@ -15,7 +28,19 @@
     width: auto;
     height: 25px;
 }
-.operator {
+
+.equal {
+    display: flex;
+    flex: 2 1 auto;
+    justify-content: space-evenly;
+}
+
+.numbers {
+    border: 1px solid blue;
+    flex: 1;
+}
+
+.operators {
     display: flex;
     flex-direction: column;
 }
